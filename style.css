@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Container for everything */
+.main-container {
+    height: 100%;
+    max-width: 1289px;
+    margin: 0px auto;
+    display: flex;
+}
+
+/* Sidebar */
+nav {
+    background-color: white;
+    width: 283px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 8px;
+}
+.sidebar-top {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+nav ul li {
+    height: 58px;
+    padding: 4px 0;
+}
+.menu-container {
+    display: flex;
+    align-items: flex-start;
+}
+.menu-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+}
+.menu-content .icon-container {
+    width: 26px;
+    height: 26px;
+}
+.menu-text {
+    margin: 0 16px 0 20px;
+}
+
+main {
+    background-color: blue;
+    width: 1006px;
+    display: flex;
+}
+
+.info-section-container {
+    background-color: dodgerblue;
+}
