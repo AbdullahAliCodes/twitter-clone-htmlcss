@@ -17,6 +17,12 @@ body {
     margin: 0px auto;
     display: flex;
 }
+.main-feed-container {
+    height: 100%;
+    max-width: 1289px;
+    margin: 0px auto;
+    display: flex;
+}
 
 /* Sidebar */
 nav {
@@ -30,13 +36,22 @@ nav {
 .sidebar-top {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
 }
+/* X Logo */
+.logo-container svg {
+    width: 50px;
+    height: 30px;
+    margin: 15px 0 10px 0;
+}
+
 nav ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    list-style-type: none;
+    margin: 2px 0;
 }
 nav ul li {
     height: 58px;
@@ -45,6 +60,17 @@ nav ul li {
 .menu-container {
     display: flex;
     align-items: flex-start;
+    transition: 0.4s;
+}
+/* Hover effect for menu list items */
+.menu-container:hover {
+    background-color: rgb(15, 20, 25, 0.1);
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-right-radius: 9999px;
+    border-top-left-radius: 9999px;
+    transition: 0.3s;
+    cursor: pointer;
 }
 .menu-content {
     display: flex;
@@ -58,6 +84,63 @@ nav ul li {
 }
 .menu-text {
     margin: 0 16px 0 20px;
+}
+/* Menu List Text (Home, Explore, etc..) */
+.menu-text span {
+    font-size: 20px;
+    font-weight: 400;
+}
+.post-btn-container {
+    margin: 16px 0;
+    width: 233px;
+    height: 50px;
+}
+/* Large Post btn left menu */
+.post-btn-container a {
+    height: 100%;
+    padding: 0 32px;
+    font-size: 15px;
+    border: 1px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: black;
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-right-radius: 9999px;
+    border-top-left-radius: 9999px;
+    text-decoration: none;
+}
+/* Large Post btn left menu text*/
+.post-btn-text {
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+/* Bottom Left Profile Small Section */
+.profile-container {
+    margin: 12px 0;
+    background-color: red;
+    width: 260px;
+    height: 66px;
+    display: flex;
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-right-radius: 9999px;
+    border-top-left-radius: 9999px;
+}
+.profile-btn-left {
+    padding: 12px;
+}
+.profile-picture {
+    background-color: pink;
+}
+.profile-names {
+    background-color: orange;
+}
+.profile-3dot-menu {
+    background-color: brown;
 }
 
 main {
