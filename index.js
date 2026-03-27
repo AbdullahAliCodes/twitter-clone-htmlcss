@@ -20,14 +20,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const exploreView = document.getElementById('explore-view');
 
     if (navHome && navExplore && homeView && exploreView) {
-        navExplore.addEventListener('click', () => {
+        navExplore.addEventListener('click', function () {
             homeView.classList.add('hidden');
             exploreView.classList.remove('hidden');
+            navHome.classList.remove('active-nav');
+            navExplore.classList.add('active-nav');
+            this.blur();
         });
 
-        navHome.addEventListener('click', () => {
+        navHome.addEventListener('click', function () {
             exploreView.classList.add('hidden');
             homeView.classList.remove('hidden');
+            navExplore.classList.remove('active-nav');
+            navHome.classList.add('active-nav');
+            this.blur();
         });
     }
 

@@ -76,8 +76,14 @@ nav ul li {
     display: flex;
     align-items: flex-start;
     transition: 0.4s;
+    outline: none;
 }
-/* Hover effect for menu list items */
+
+.menu-container:focus,
+.menu-container:focus-within {
+    background-color: transparent;
+}
+
 .menu-container:hover {
     background-color: rgb(15, 20, 25, 0.1);
     border-bottom-left-radius: 9999px;
@@ -105,6 +111,43 @@ nav ul li {
     font-size: 20px;
     font-weight: 400;
 }
+
+.menu-container.active-nav .menu-text span {
+    font-weight: 700;
+}
+
+#nav-home .home-nav-icon-inactive {
+    display: none;
+}
+
+#nav-home:not(.active-nav) .home-nav-icon-active {
+    display: none;
+}
+
+#nav-home:not(.active-nav) .home-nav-icon-inactive {
+    display: block;
+}
+
+#nav-home.active-nav .home-nav-icon-active {
+    display: block;
+}
+
+#nav-home.active-nav .home-nav-icon-inactive {
+    display: none;
+}
+
+#nav-explore .explore-nav-icon-active {
+    display: none;
+}
+
+#nav-explore.active-nav .explore-nav-icon-default {
+    display: none;
+}
+
+#nav-explore.active-nav .explore-nav-icon-active {
+    display: block;
+}
+
 .post-btn-container {
     margin: 16px 0;
     width: 233px;
@@ -1070,6 +1113,13 @@ main {
     font-size: 13px;
     color: #536471;
     margin-bottom: 2px;
+}
+
+.explore-trending-with {
+    font-size: 13px;
+    color: var(--twitter-blue, #1d9bf0);
+    margin-top: 4px;
+    line-height: 18px;
 }
 
 .explore-title {
