@@ -1,20 +1,55 @@
+// --- Clean Dark Mode Logic ---
 const rootElement = document.documentElement;
-const savedTheme = localStorage.getItem('theme');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const themeToggleBtn = document.getElementById('theme-toggle');
+const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-    rootElement.setAttribute('data-theme', 'dark');
+// 1. Evaluate and apply the correct theme
+const applyTheme = () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        rootElement.setAttribute('data-theme', 'dark');
+    } else if (savedTheme === 'light') {
+        rootElement.removeAttribute('data-theme');
+    } else if (darkModeQuery.matches) {
+        // Fallback to OS if no saved preference
+        rootElement.setAttribute('data-theme', 'dark');
+    } else {
+        rootElement.removeAttribute('data-theme');
+    }
+};
+
+// Run immediately on load
+applyTheme();
+
+// 2. Listen for OS theme changes
+const handleOsChange = () => {
+    // ONLY auto-switch if the user hasn't explicitly overridden via the button
+    if (!localStorage.getItem('theme')) {
+        applyTheme();
+    }
+};
+
+// Modern browsers + Safari fallback
+if (darkModeQuery.addEventListener) {
+    darkModeQuery.addEventListener('change', handleOsChange);
+} else {
+    darkModeQuery.addListener(handleOsChange); 
 }
 
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-    if (!localStorage.getItem('theme')) {
-        if (e.matches) {
-            rootElement.setAttribute('data-theme', 'dark');
-        } else {
+// 3. Handle manual toggle button clicks
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', function() {
+        const currentTheme = rootElement.getAttribute('data-theme');
+        if (currentTheme === 'dark') {
             rootElement.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'light');
+        } else {
+            rootElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
         }
-    }
-});
+        this.blur();
+    });
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     const mobileProfileBtn = document.querySelector('.mobile-profile-btn');
@@ -69,22 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const themeToggleBtn = document.getElementById('theme-toggle');
-
-    if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', function () {
-            const currentTheme = rootElement.getAttribute('data-theme');
-            if (currentTheme === 'dark') {
-                rootElement.removeAttribute('data-theme');
-                localStorage.setItem('theme', 'light');
-            } else {
-                rootElement.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
-            }
-            this.blur();
-        });
-    }
-
     const grokFab = document.getElementById('fab-grok');
     const grokOverlay = document.getElementById('grok-modal-overlay');
 
@@ -111,6 +130,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const grokActionBtn = document.getElementById('grok-action-btn');
         const iconMic = grokActionBtn.querySelector('.icon-mic');
         const iconSend = grokActionBtn.querySelector('.icon-send');
+
+        // Allows us to submit the user input to Grok
 
         const submitToGrok = () => {
             const query = grokInput.value.trim();
