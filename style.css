@@ -1,3 +1,24 @@
+:root {
+    --bg-color: white;
+    --text-primary: #0f1419;
+    --text-muted: #536471;
+    --border-color: #eff3f4;
+    --hover-bg: rgba(15, 20, 25, 0.1);
+    --search-bg: #eff3f4;
+    --twitter-blue: #1d9bf0;
+    --header-blur: rgba(255, 255, 255, 0.85);
+}
+
+[data-theme="dark"] {
+    --bg-color: #000000;
+    --text-primary: #e7e9ea;
+    --text-muted: #71767b;
+    --border-color: #2f3336;
+    --hover-bg: rgba(231, 233, 234, 0.1);
+    --search-bg: #202327;
+    --header-blur: rgba(0, 0, 0, 0.65);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +26,8 @@
 }
 
 body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
     font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     width: 100vw;
     min-height: 100vh;
@@ -22,15 +45,15 @@ body {
 .main-feed-container {
     width: 600px;
     min-height: 100vh;
-    border-left: 1px solid var(--border-color, #eff3f4);
-    border-right: 1px solid var(--border-color, #eff3f4);
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
 }
 
 /* Sidebar */
 nav {
-    background-color: white;
+    background-color: var(--bg-color);
     width: 283px;
     display: flex;
     flex-direction: column;
@@ -58,6 +81,11 @@ nav::-webkit-scrollbar {
     width: 50px;
     height: 30px;
     margin: 15px 0 10px 0;
+    fill: var(--text-primary);
+}
+
+nav .menu-content .icon-container svg {
+    fill: var(--text-primary);
 }
 
 nav ul {
@@ -85,7 +113,7 @@ nav ul li {
 }
 
 .menu-container:hover {
-    background-color: rgb(15, 20, 25, 0.1);
+    background-color: var(--hover-bg);
     border-bottom-left-radius: 9999px;
     border-bottom-right-radius: 9999px;
     border-top-right-radius: 9999px;
@@ -190,7 +218,7 @@ nav ul li {
     transition: 0.2s ease;
 }
 .profile-container:hover {
-    background-color: rgba(15, 20, 25, 0.1);
+    background-color: var(--hover-bg);
 }
 .profile-info {
     display: flex;
@@ -214,11 +242,12 @@ nav ul li {
 .profile-handle {
     font-size: 15px;
     font-weight: 400;
-    color: #536471;
+    color: var(--text-muted);
 }
 .profile-3dot-menu svg {
     width: 18.75px;
     height: 18.75px;
+    fill: var(--text-primary);
 }
 
 main {
@@ -245,7 +274,7 @@ main {
 .search-wrapper {
     position: sticky;
     top: 0;
-    background-color: white;
+    background-color: var(--bg-color);
     padding-bottom: 12px;
     z-index: 10;
 }
@@ -253,7 +282,7 @@ main {
 .search-bar {
     display: flex;
     align-items: center;
-    background-color: #eff3f4;
+    background-color: var(--search-bg);
     border-radius: 9999px;
     height: 44px;
     padding: 0 16px;
@@ -262,19 +291,19 @@ main {
 }
 
 .search-bar:focus-within {
-    background-color: white;
-    border-color: var(--twitter-blue, #1d9bf0);
+    background-color: var(--bg-color);
+    border-color: var(--twitter-blue);
 }
 
 .search-bar svg {
     width: 18.75px;
     height: 18.75px;
-    fill: #536471;
+    fill: var(--text-muted);
     margin-right: 12px;
 }
 
 .search-bar:focus-within svg {
-    fill: var(--twitter-blue, #1d9bf0);
+    fill: var(--twitter-blue);
 }
 
 .search-bar input {
@@ -283,11 +312,11 @@ main {
     outline: none;
     width: 100%;
     font-size: 15px;
-    color: #0f1419;
+    color: var(--text-primary);
 }
 
 .right-card {
-    border: 1px solid var(--border-color, #eff3f4);
+    border: 1px solid var(--border-color);
     border-radius: 16px;
     margin-bottom: 16px;
     display: flex;
@@ -300,7 +329,7 @@ main {
     padding: 12px 16px;
     font-size: 20px;
     font-weight: 800;
-    color: #0f1419;
+    color: var(--text-primary);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -315,35 +344,35 @@ main {
 }
 
 .card-item:hover {
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: var(--hover-bg);
 }
 
 .show-more {
     padding: 16px;
-    color: var(--twitter-blue, #1d9bf0);
+    color: var(--twitter-blue);
     font-size: 15px;
     transition: 0.2s;
     cursor: pointer;
 }
 
 .show-more:hover {
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: var(--hover-bg);
 }
 
 .text-muted {
-    color: #536471;
+    color: var(--text-muted);
     font-size: 13px;
 }
 
 .text-bold {
     font-weight: 700;
-    color: #0f1419;
+    color: var(--text-primary);
     font-size: 15px;
     margin-top: 2px;
 }
 
 .btn-subscribe {
-    background: var(--twitter-blue, #1d9bf0);
+    background: var(--twitter-blue);
     color: white;
     border: none;
     border-radius: 9999px;
@@ -357,8 +386,8 @@ main {
 }
 
 .btn-follow {
-    background: #0f1419;
-    color: white;
+    background: var(--text-primary);
+    color: var(--bg-color);
     border: none;
     border-radius: 9999px;
     padding: 0 16px;
@@ -371,7 +400,7 @@ main {
 .premium-text {
     font-size: 15px;
     line-height: 20px;
-    color: #0f1419;
+    color: var(--text-primary);
     margin-bottom: 4px;
 }
 
@@ -384,7 +413,7 @@ main {
 .trending-dots svg {
     width: 18.75px;
     height: 18.75px;
-    fill: #536471;
+    fill: var(--text-muted);
 }
 
 .follow-row {
@@ -423,11 +452,11 @@ main {
     flex-wrap: wrap;
     gap: 8px 12px;
     font-size: 13px;
-    color: #536471;
+    color: var(--text-muted);
 }
 
 .right-footer a {
-    color: #536471;
+    color: var(--text-muted);
     text-decoration: none;
     transition: 0.2s;
 }
@@ -461,7 +490,7 @@ main {
 .live-title {
     font-weight: 700;
     font-size: 15px;
-    color: #0f1419;
+    color: var(--text-primary);
     line-height: 20px;
 }
 
@@ -485,20 +514,20 @@ main {
 .live-badge span {
     font-weight: 700;
     font-size: 13px;
-    color: #0f1419;
+    color: var(--text-primary);
 }
 
 .card-header-icon svg {
     width: 18.75px;
     height: 18.75px;
-    fill: #0f1419;
+    fill: var(--text-primary);
     cursor: pointer;
 }
 
 .news-title {
     font-weight: 700;
     font-size: 15px;
-    color: #0f1419;
+    color: var(--text-primary);
     margin-bottom: 4px;
     line-height: 20px;
 }
@@ -518,7 +547,7 @@ main {
     width: 26px;
     height: 26px;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 2px solid var(--bg-color);
     margin-right: -12px;
     object-fit: cover;
     position: relative;
@@ -540,9 +569,9 @@ main {
 .feed-header {
     position: sticky;
     top: 0;
-    background: rgba(255, 255, 255, 0.85);
+    background: var(--header-blur);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-color, #eff3f4);
+    border-bottom: 1px solid var(--border-color);
     z-index: 10;
     cursor: pointer;
 }
@@ -562,18 +591,18 @@ main {
 }
 
 .tab:hover {
-    background: rgba(15, 20, 25, 0.1);
+    background: var(--hover-bg);
 }
 
 .tab span {
     font-weight: 500;
     font-size: 15px;
-    color: #536471;
+    color: var(--text-muted);
 }
 
 .tab.active span {
     font-weight: 700;
-    color: #0f1419;
+    color: var(--text-primary);
 }
 
 .active-line {
@@ -581,14 +610,14 @@ main {
     bottom: 0;
     height: 4px;
     width: 56px;
-    background-color: var(--twitter-blue, #1d9bf0);
+    background-color: var(--twitter-blue);
     border-radius: 9999px;
 }
 
 .tweet-compose-container {
     display: flex;
     padding: 16px;
-    border-bottom: 1px solid var(--border-color, #eff3f4);
+    border-bottom: 1px solid var(--border-color);
     gap: 12px;
 }
 
@@ -611,12 +640,12 @@ main {
     outline: none;
     font-size: 20px;
     padding: 12px 0;
-    color: #0f1419;
+    color: var(--text-primary);
     background: transparent;
 }
 
 .compose-input-wrapper input::placeholder {
-    color: #536471;
+    color: var(--text-muted);
 }
 
 .compose-tools {
@@ -649,7 +678,7 @@ main {
 .icon-wrap svg {
     width: 20px;
     height: 20px;
-    fill: var(--twitter-blue, #1d9bf0);
+    fill: var(--twitter-blue);
 }
 
 .compose-btn {
@@ -671,27 +700,27 @@ main {
 .show-posts-banner {
     padding: 16px;
     text-align: center;
-    color: var(--twitter-blue, #1d9bf0);
+    color: var(--twitter-blue);
     font-size: 15px;
-    border-bottom: 1px solid var(--border-color, #eff3f4);
+    border-bottom: 1px solid var(--border-color);
     cursor: pointer;
     transition: 0.2s;
 }
 
 .show-posts-banner:hover {
-    background: rgba(15, 20, 25, 0.03);
+    background: var(--hover-bg);
 }
 
 .tweet {
     display: flex;
     padding: 12px 16px;
-    border-bottom: 1px solid var(--border-color, #eff3f4);
+    border-bottom: 1px solid var(--border-color);
     cursor: pointer;
     transition: background 0.2s ease;
 }
 
 .tweet:hover {
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: var(--hover-bg);
 }
 
 .tweet-avatar {
@@ -713,7 +742,7 @@ main {
 .tweet-context {
     display: flex;
     align-items: center;
-    color: #536471;
+    color: var(--text-muted);
     font-size: 13px;
     font-weight: 700;
     margin-bottom: 4px;
@@ -723,7 +752,7 @@ main {
 .tweet-context svg {
     width: 16px;
     height: 16px;
-    fill: #536471;
+    fill: var(--text-muted);
     margin-left: 0;
     margin-right: 8px;
 }
@@ -746,7 +775,7 @@ main {
 
 .tweet-name {
     font-weight: 700;
-    color: #0f1419;
+    color: var(--text-primary);
 }
 
 .tweet-name:hover {
@@ -755,11 +784,11 @@ main {
 
 .tweet-handle,
 .tweet-time {
-    color: #536471;
+    color: var(--text-muted);
 }
 
 .tweet-options {
-    color: #536471;
+    color: var(--text-muted);
     border-radius: 50%;
     width: 34px;
     height: 34px;
@@ -771,8 +800,8 @@ main {
 
 .tweet-options:hover {
     background-color: rgba(29, 155, 240, 0.1);
-    color: var(--twitter-blue, #1d9bf0);
-    fill: var(--twitter-blue, #1d9bf0);
+    color: var(--twitter-blue);
+    fill: var(--twitter-blue);
 }
 
 .tweet-options svg {
@@ -784,7 +813,7 @@ main {
 .tweet-text {
     font-size: 15px;
     line-height: 20px;
-    color: #0f1419;
+    color: var(--text-primary);
     margin-top: 2px;
     white-space: pre-wrap;
     word-wrap: break-word;
@@ -794,7 +823,7 @@ main {
     margin-top: 12px;
     border-radius: 16px;
     overflow: hidden;
-    border: 1px solid var(--border-color, #eff3f4);
+    border: 1px solid var(--border-color);
     width: 100%;
 }
 
@@ -823,14 +852,14 @@ main {
 
 .quote-tweet {
     margin-top: 12px;
-    border: 1px solid var(--border-color, #eff3f4);
+    border: 1px solid var(--border-color);
     border-radius: 16px;
     overflow: hidden;
     transition: background 0.2s;
 }
 
 .quote-tweet:hover {
-    background-color: rgba(0, 0, 0, 0.02);
+    background-color: var(--hover-bg);
 }
 
 .quote-padding {
@@ -853,7 +882,7 @@ main {
 }
 
 .quote-media {
-    border-top: 1px solid var(--border-color, #eff3f4);
+    border-top: 1px solid var(--border-color);
 }
 
 .tweet-footer {
@@ -862,8 +891,8 @@ main {
     align-items: center;
     margin-top: 12px;
     max-width: 425px;
-    color: #536471;
-    fill: #536471;
+    color: var(--text-muted);
+    fill: var(--text-muted);
 }
 
 .footer-action {
@@ -891,8 +920,8 @@ main {
 }
 
 .action-reply:hover {
-    color: #1d9bf0;
-    fill: #1d9bf0;
+    color: var(--twitter-blue);
+    fill: var(--twitter-blue);
 }
 
 .action-reply:hover .footer-icon-wrap {
@@ -918,8 +947,8 @@ main {
 }
 
 .action-view:hover {
-    color: #1d9bf0;
-    fill: #1d9bf0;
+    color: var(--twitter-blue);
+    fill: var(--twitter-blue);
 }
 
 .action-view:hover .footer-icon-wrap {
@@ -945,8 +974,8 @@ main {
     width: 52px;
     height: 52px;
     border-radius: 12px;
-    background-color: white;
-    border: 1px solid #9fb5c3;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
     box-shadow: rgba(0, 0, 0, 0.15) 2px 4px 12px;
     display: flex;
     justify-content: center;
@@ -962,7 +991,7 @@ main {
 .float-btn svg {
     width: 24px;
     height: 24px;
-    fill: #0f1419;
+    fill: var(--text-primary);
 }
 
 .hidden {
@@ -972,11 +1001,11 @@ main {
 .explore-header {
     position: sticky;
     top: 0;
-    background: rgba(255, 255, 255, 0.85);
+    background: var(--header-blur);
     backdrop-filter: blur(12px);
     z-index: 10;
     padding-top: 8px;
-    border-bottom: 1px solid var(--border-color, #eff3f4);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .explore-search-row {
@@ -990,7 +1019,7 @@ main {
     flex: 1;
     display: flex;
     align-items: center;
-    background-color: #eff3f4;
+    background-color: var(--search-bg);
     border-radius: 9999px;
     height: 44px;
     padding: 0 16px;
@@ -999,19 +1028,19 @@ main {
 }
 
 .explore-search-bar:focus-within {
-    background-color: white;
-    border-color: var(--twitter-blue, #1d9bf0);
+    background-color: var(--bg-color);
+    border-color: var(--twitter-blue);
 }
 
 .explore-search-bar svg {
     width: 18.75px;
     height: 18.75px;
-    fill: #536471;
+    fill: var(--text-muted);
     margin-right: 12px;
 }
 
 .explore-search-bar:focus-within svg {
-    fill: var(--twitter-blue, #1d9bf0);
+    fill: var(--twitter-blue);
 }
 
 .explore-search-bar input {
@@ -1020,13 +1049,13 @@ main {
     outline: none;
     width: 100%;
     font-size: 15px;
-    color: #0f1419;
+    color: var(--text-primary);
 }
 
 .settings-icon svg {
     width: 20px;
     height: 20px;
-    fill: #0f1419;
+    fill: var(--text-primary);
     cursor: pointer;
 }
 
@@ -1053,18 +1082,18 @@ main {
 }
 
 .explore-tab:hover {
-    background: rgba(15, 20, 25, 0.1);
+    background: var(--hover-bg);
 }
 
 .explore-tab span {
     font-weight: 500;
     font-size: 15px;
-    color: #536471;
+    color: var(--text-muted);
 }
 
 .explore-tab.active span {
     font-weight: 700;
-    color: #0f1419;
+    color: var(--text-primary);
 }
 
 .explore-active-line {
@@ -1072,7 +1101,7 @@ main {
     bottom: 0;
     height: 4px;
     width: 56px;
-    background-color: var(--twitter-blue, #1d9bf0);
+    background-color: var(--twitter-blue);
     border-radius: 9999px;
     display: none;
 }
@@ -1085,13 +1114,13 @@ main {
     padding: 12px 16px;
     font-size: 20px;
     font-weight: 800;
-    color: #0f1419;
-    border-bottom: 1px solid var(--border-color, #eff3f4);
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .explore-item {
     padding: 12px 16px;
-    border-bottom: 1px solid var(--border-color, #eff3f4);
+    border-bottom: 1px solid var(--border-color);
     display: flex;
     justify-content: space-between;
     cursor: pointer;
@@ -1099,7 +1128,7 @@ main {
 }
 
 .explore-item:hover {
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: var(--hover-bg);
 }
 
 .explore-item-content {
@@ -1111,13 +1140,13 @@ main {
 
 .explore-context {
     font-size: 13px;
-    color: #536471;
+    color: var(--text-muted);
     margin-bottom: 2px;
 }
 
 .explore-trending-with {
     font-size: 13px;
-    color: var(--twitter-blue, #1d9bf0);
+    color: var(--twitter-blue);
     margin-top: 4px;
     line-height: 18px;
 }
@@ -1125,7 +1154,7 @@ main {
 .explore-title {
     font-size: 15px;
     font-weight: 700;
-    color: #0f1419;
+    color: var(--text-primary);
     line-height: 20px;
     margin-bottom: 4px;
 }
@@ -1135,7 +1164,7 @@ main {
     align-items: center;
     gap: 8px;
     font-size: 13px;
-    color: #536471;
+    color: var(--text-muted);
 }
 
 .explore-item-right {
@@ -1155,11 +1184,391 @@ main {
 .explore-more svg {
     width: 18.75px;
     height: 18.75px;
-    fill: #536471;
+    fill: var(--text-muted);
 }
 
 .explore-subsection-rule {
     height: 1px;
-    background-color: var(--border-color, #eff3f4);
+    background-color: var(--border-color);
     margin: 0;
+}
+
+#grok-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 24px;
+    padding-bottom: calc(24px + 52px + 12px + 52px + 12px);
+    box-sizing: border-box;
+    z-index: 999;
+}
+
+.grok-modal {
+    background-color: var(--bg-color);
+    width: min(500px, calc(100vw - 48px));
+    max-width: 500px;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.grok-header-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.grok-header-icons svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--text-primary);
+    cursor: pointer;
+}
+
+.grok-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text-primary);
+    text-align: center;
+    margin: 12px 0;
+}
+
+.grok-input-container {
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: var(--bg-color);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.grok-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    color: var(--text-primary);
+    width: 100%;
+}
+
+.grok-input::placeholder {
+    color: var(--text-muted);
+}
+
+.grok-input-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grok-attach {
+    width: 20px;
+    height: 20px;
+    fill: var(--text-muted);
+    cursor: pointer;
+}
+
+.grok-input-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.grok-auto-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.grok-auto-btn svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--text-primary);
+}
+
+.grok-auto-btn .chevron {
+    width: 18px;
+    height: 18px;
+}
+
+.grok-voice-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.grok-voice-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: var(--bg-color);
+}
+
+.grok-action-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.grok-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.grok-pill:hover {
+    background-color: var(--hover-bg);
+}
+
+.grok-pill svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--text-primary);
+}
+
+@media (max-width: 499px) {
+    #grok-modal-overlay,
+    #chat-modal-overlay {
+        padding-right: 16px;
+        padding-bottom: calc(70px + 52px + 12px + 52px + 12px);
+    }
+}
+
+#chat-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 24px;
+    padding-bottom: calc(24px + 52px + 12px + 52px + 12px);
+    box-sizing: border-box;
+    z-index: 999;
+}
+
+.chat-modal {
+    background-color: var(--bg-color);
+    width: min(400px, calc(100vw - 48px));
+    max-width: 400px;
+    height: 80vh;
+    max-height: 600px;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid transparent;
+    flex-shrink: 0;
+}
+
+.chat-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.chat-header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.chat-filter {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-primary);
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    padding: 4px 12px;
+}
+
+.chat-filter svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--text-primary);
+}
+
+.chat-header-icons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.chat-header-icons svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--text-primary);
+    cursor: pointer;
+}
+
+.chat-search-container {
+    padding: 8px 16px 12px 16px;
+    border-bottom: 1px solid var(--border-color);
+    flex-shrink: 0;
+}
+
+.chat-modal-search {
+    height: 40px;
+}
+
+.chat-list {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: thin;
+    scrollbar-color: var(--text-muted) var(--search-bg);
+}
+
+.chat-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-list::-webkit-scrollbar-track {
+    background: var(--search-bg);
+    border-radius: 4px;
+}
+
+.chat-list::-webkit-scrollbar-thumb {
+    background: var(--text-muted);
+    border-radius: 4px;
+}
+
+.chat-list::-webkit-scrollbar-thumb:hover {
+    background: var(--text-primary);
+}
+
+.chat-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.chat-item:hover {
+    background-color: var(--hover-bg);
+}
+
+.chat-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.chat-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.chat-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+}
+
+.chat-info-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+}
+
+.chat-name-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    min-width: 0;
+}
+
+.chat-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chat-time {
+    font-size: 13px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    margin-left: 8px;
+}
+
+.chat-preview {
+    font-size: 15px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chat-modal .icon-lock {
+    width: 14px;
+    height: 14px;
+    fill: var(--text-primary);
+    flex-shrink: 0;
+}
+
+.chat-modal .icon-verified {
+    width: 18px;
+    height: 18px;
+    fill: var(--twitter-blue);
+    flex-shrink: 0;
 }
