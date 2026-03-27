@@ -290,24 +290,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let activeTweetToClone = null;
 
-    const markSourceReposted = (tweetEl) => {
-        if (!tweetEl) {
-            return;
-        }
-        const btn =
-            tweetEl.querySelector('.tweet-footer > .footer-action.action-repost') ||
-            tweetEl.querySelector('.footer-action.action-repost');
-        if (btn) {
-            btn.classList.add('is-reposted');
-        }
-        const tid = tweetEl.getAttribute('data-tweet-id');
-        if (tid) {
-            ensureTweetState(tid);
-            tweetStates[tid].reposted = true;
-            saveTweetStates();
-        }
-    };
-
     document.addEventListener('click', (e) => {
         const retweetBtn = e.target.closest('.footer-action.action-repost');
         if (retweetBtn && feedTimeline && feedTimeline.contains(retweetBtn)) {
@@ -346,7 +328,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     ctx.innerHTML = `${ctxSvg} You reposted`;
                 }
                 feedContainer.prepend(clonedTweet);
-                markSourceReposted(activeTweetToClone);
+                const originalRepostBtn = activeTweetToClone.querySelector('.action-repost');
+                if (originalRepostBtn) {
+                    originalRepostBtn.classList.add('is-reposted');
+                }
+                const repostTweetId = activeTweetToClone.getAttribute('data-tweet-id');
+                if (repostTweetId) {
+                    ensureTweetState(repostTweetId);
+                    tweetStates[repostTweetId].reposted = true;
+                    saveTweetStates();
+                }
                 customFeedItems.unshift(clonedTweet.outerHTML);
                 saveCustomFeed();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -455,7 +446,16 @@ document.addEventListener('DOMContentLoaded', () => {
             newTweet.appendChild(content);
 
             feedContainer.prepend(newTweet);
-            markSourceReposted(activeTweetToClone);
+            const originalRepostBtn = activeTweetToClone.querySelector('.action-repost');
+            if (originalRepostBtn) {
+                originalRepostBtn.classList.add('is-reposted');
+            }
+            const repostTweetId = activeTweetToClone.getAttribute('data-tweet-id');
+            if (repostTweetId) {
+                ensureTweetState(repostTweetId);
+                tweetStates[repostTweetId].reposted = true;
+                saveTweetStates();
+            }
             customFeedItems.unshift(newTweet.outerHTML);
             saveCustomFeed();
             quoteModalOverlay.classList.add('hidden');
