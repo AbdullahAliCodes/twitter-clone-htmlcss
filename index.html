@@ -4,11 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
 
     <title>Home / X</title>
 </head>
 
 <body>
+    <div class="mobile-drawer-overlay">
+        <div class="mobile-drawer">
+            <div class="drawer-header">
+                <div class="drawer-header-top" style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <img src="https://i.pravatar.cc/150?img=11" alt="Profile" class="drawer-avatar">
+                    <div class="drawer-add-account" style="width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--border-color, #eff3f4); display: flex; justify-content: center; align-items: center; font-size: 20px; font-weight: 300; cursor: pointer;">+</div>
+                </div>
+                <div class="drawer-names" style="margin-top: 8px;">
+                    <span class="text-bold" style="font-size: 17px;">dullz</span>
+                    <span class="text-muted">@UncleDullaz</span>
+                </div>
+                <div class="drawer-stats">
+                    <span class="text-bold">686</span> <span class="text-muted">Following</span>
+                    <span class="text-bold" style="margin-left: 16px;">277</span> <span class="text-muted">Followers</span>
+                </div>
+            </div>
+            <div class="drawer-links">
+                <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><g><path d="M5.651 19h12.698c-.337-1.8-1.023-3.21-1.945-4.19C15.318 13.65 13.838 13 12 13s-3.317.65-4.404 1.81c-.922.98-1.608 2.39-1.945 4.19zm.486-5.56C7.627 11.85 9.648 11 12 11s4.373.85 5.863 2.44c1.477 1.58 2.366 3.8 2.632 6.46l.11 1.1H3.395l.11-1.1c.266-2.66 1.155-4.88 2.632-6.46zM12 4c-1.105 0-2 .9-2 2s.895 2 2 2 2-.9 2-2-.895-2-2-2zM8 6c0-2.21 1.791-4 4-4s4 1.79 4 4-1.791 4-4 4-4-1.79-4-4z"></path></g></svg><span>Profile</span></a>
+                <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><g><path d="M21.742 21.75l-7.563-11.179 7.056-8.321h-2.456l-5.691 6.714-4.54-6.714H2.359l7.29 10.776L2.25 21.75h2.456l6.035-7.118 4.818 7.118h6.191-.008zM7.739 3.818L18.81 20.182h-2.447L5.29 3.818h2.447z"></path></g></svg><span>Premium</span></a>
+                <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><g><path d="M3 4.5h14V6H3v-1.5zm0 5h14v1.5H3V9.5zm0 5h14v1.5H3v-1.5zm0 5h14v1.5H3v-1.5zM21 4.5h-2V6h2v-1.5zm0 5h-2v1.5h2V9.5zm0 5h-2v1.5h2v-1.5zm0 5h-2v1.5h2v-1.5z"></path></g></svg><span>Lists</span></a>
+                <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><g><path d="M12 11.816c1.355 0 2.872-.15 3.84-1.256.814-.93 1.078-2.368.806-4.392-.38-2.826-2.116-4.513-4.646-4.513S7.734 3.342 7.354 6.168c-.272 2.024-.008 3.46.806 4.392.968 1.106 2.485 1.256 3.84 1.256zm-3.04-5.32c.23-1.708 1.115-2.84 3.04-2.84s2.81 1.132 3.04 2.84c.15 1.118-.035 1.9-.383 2.3-.434.496-1.396.72-2.657.72s-2.223-.224-2.657-.72c-.348-.4-.533-1.182-.383-2.3zM4.053 21h15.894c-.214-2.353-1.636-4.42-3.87-5.59-1.22-.64-2.654-.95-4.077-.95s-2.857.31-4.077.95c-2.234 1.17-3.656 3.237-3.87 5.59z"></path></g></svg><span>Communities</span></a>
+                <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg><span>Bookmarks</span></a>
+                <div class="drawer-divider"></div>
+                <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><g><path d="M7 6h10v2h-1v2.7l3.316 4.97c.446.67.684 1.46.684 2.26 0 2.25-1.822 4.07-4.07 4.07H8.07C5.822 22 4 20.18 4 17.93c0-.8.238-1.59.684-2.26L8 10.7V8H7V6zm3 2v3.3l-1.615 2.42c.691.07 1.436.1 1.996.04.572-.07.983-.15 1.424-.24h.005c.445-.09.92-.19 1.571-.26.599-.07 1.286-.06 1.912-.02L14 11.3V8h-4zm6.742 7.42c-.227-.04-.531-.08-.873-.12-.757-.08-1.62-.13-2.25-.06-.572.07-.983.15-1.424.24h-.005c-.445.09-.92.19-1.571.26-.869.11-1.922.03-2.707-.05-.288-.04-.55-.07-.769-.1l-.795 1.19c-.227.34-.348.74-.348 1.15C6 19.07 6.927 20 8.07 20h7.86c1.143 0 2.07-.93 2.07-2.07 0-.41-.121-.81-.348-1.15l-.91-1.36zM10 3c-.552 0-1 .45-1 1s.448 1 1 1 1-.45 1-1-.448-1-1-1zm3.5-2c-.828 0-1.5.67-1.5 1.5S12.672 4 13.5 4 15 3.33 15 2.5 14.328 1 13.5 1z"></path></g></svg><span>Creator Studio</span></a>
+                <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><g><path d="M20 18.5H4v-13h16v13zm-14-11v9h12v-9H6zM13 15h4v-2h-4v2zm-2-2h-4v-2h4v2zm2-2h4V9h-4v2z"></path></g></svg><span>Business</span></a>
+                <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><g><path d="M21.5 5.5h-19C1.67 5.5 1 6.17 1 7v10c0 .83.67 1.5 1.5 1.5h19c.83 0 1.5-.67 1.5-1.5V7c0-.83-.67-1.5-1.5-1.5zM21 17H3V7h18v10z"></path><path d="M12 9.5l4 4-1.41 1.41L13 13.33V15h-2v-1.67l-1.59 1.58L8 13.5l4-4z"></path></g></svg><span>Ads</span></a>
+                <div class="drawer-divider"></div>
+                <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><g><path d="M20.536 14.885c-1.332-2.175-1.332-4.595 0-6.77l-1.745-1.006c-1.895 3.097-1.895 6.685 0 9.782l1.745-1.006zM8.21 21.054c2.518.237 4.96-.547 6.84-2.19l-1.288-1.55c-1.365 1.192-3.136 1.76-4.963 1.588l-.59 1.905-.002.246zM3.464 9.115c1.333 2.175 1.333 4.595 0 6.77l1.745 1.006c1.896-3.097 1.896-6.685 0-9.782L3.464 9.115zM15.79 2.946c-2.517-.237-4.96.547-6.84 2.19l1.288 1.55c1.366-1.192 3.137-1.76 4.964-1.588l.588-2.152z"></path><circle cx="12" cy="12" r="3.5"></circle></g></svg><span>Settings and privacy</span></a>
+                <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h4v2h-4C5.672 4 5 4.67 5 5.5v13c0 .83.672 1.5 1.5 1.5h4v2h-4C5.119 22 4 20.88 4 19.5v-13z"></path><path d="M16 17v-4h-8v-2h8V7l5 5-5 5z"></path></g></svg><span>Log out</span></a>
+            </div>
+        </div>
+    </div>
     <div class="main-container">
         <!-- Sidebar -->
         <nav>
@@ -18,7 +51,7 @@
                 </div>
                 <ul>
                     <li>
-                        <div class="menu-container">
+                        <div class="menu-container" id="nav-home">
                             <!-- icon and menu item -->
                             <div class="menu-content">
                                 <div class="icon-container">
@@ -31,7 +64,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="menu-container">
+                        <div class="menu-container" id="nav-explore">
                             <!-- icon and menu item -->
                             <div class="menu-content">
                                 <div class="icon-container">
@@ -159,10 +192,17 @@
 
             <!-- Bottom Left Profile Small Section -->
             <div class="profile-container">
-                <div class="profile-btn-left">
-                    <div class="profile-picture"></div>
-                    <div class="profile-names"></div>
-                    <div class="profile-3dot-menu"></div>
+                <div class="profile-info">
+                    <div class="profile-picture">
+                        <img src="https://i.pravatar.cc/150?img=11" alt="Profile Picture">
+                    </div>
+                    <div class="profile-names">
+                        <span class="profile-name">dullz</span>
+                        <span class="profile-handle">@UncleDullaz</span>
+                    </div>
+                </div>
+                <div class="profile-3dot-menu">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg>
                 </div>
             </div>
             
@@ -172,20 +212,762 @@
         
             <!-- Main Feed -->
             <div class="main-feed-container">
-                <div class="tweet-now">
-                    Whats happening mabru?
+                <div class="mobile-header">
+                    <img src="https://i.pravatar.cc/150?img=11" alt="Profile" class="mobile-profile-btn">
+                    <svg viewBox="0 0 24 24" class="mobile-logo" aria-hidden="true"><g><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></g></svg>
+                    <div class="mobile-upgrade">Upgrade</div>
                 </div>
+                <div id="home-view">
+                <header class="feed-header">
+                    <div class="header-tabs">
+                        <div class="tab active">
+                            <span>For you</span>
+                            <div class="active-line"></div>
+                        </div>
+                        <div class="tab">
+                            <span>Following</span>
+                        </div>
+                        <div class="tab">
+                            <span>ZMF 🐎</span>
+                        </div>
+                    </div>
+                </header>
+                <div class="tweet-compose-container">
+                    <div class="compose-avatar">
+                        <img src="https://i.pravatar.cc/150?img=11" alt="Profile">
+                    </div>
+                    <div class="compose-content">
+                        <div class="compose-input-wrapper">
+                            <input type="text" placeholder="What's happening?">
+                        </div>
+                        <div class="compose-tools">
+                            <div class="action-icons">
+                                <div class="icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M3 5.5C3 4.119 4.119 3 5.5 3h13C19.881 3 21 4.119 21 5.5v13c0 1.381-1.119 2.5-2.5 2.5h-13C4.119 21 3 19.881 3 18.5v-13zM5.5 5c-.276 0-.5.224-.5.5v9.086l3-3 3 3 5-5 3 3V5.5c0-.276-.224-.5-.5-.5h-13zM19 15.414l-3-3-5 5-3-3-3 3V18.5c0 .276.224.5.5.5h13c.276 0 .5-.224.5-.5v-3.086zM9.75 7C8.784 7 8 7.784 8 8.75s.784 1.75 1.75 1.75 1.75-.784 1.75-1.75S10.716 7 9.75 7z"></path></g></svg></div>
+                                <div class="icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M11.96 14.945c-.067 0-.136-.01-.203-.027-1.13-.318-1.662-2.008-1.662-3.347 0-3.027 1.213-3.48 1.902-3.48.583 0 1.25.348 1.444 1.153l.928-.351c-.309-1.141-1.329-1.802-2.372-1.802-1.22 0-2.902.892-2.902 4.48 0 2.568.806 4.321 2.658 4.843.356.1.722.147 1.09.147.818 0 1.62-.217 2.271-.62v-3.32h-1.63v1.036h.63v1.392c-.526.33-1.157.5-2.124.5zM14.615 7.092h4.417v1.08h-3.369v2.071h2.906v1.077h-2.906v2.66h-1.048v-6.888zm-2.062 6.888h-1.039V7.092h1.039v6.888zM6.677 7.092H4.49v6.888h2.187c1.325 0 2.441-1.026 2.441-2.617V9.708c0-1.59-1.116-2.616-2.441-2.616zm.403 4.271c0 .672-.518 1.546-1.441 1.546H5.52v-4.74h.119c.923 0 1.441.874 1.441 1.546v1.648z"></path></g></svg></div>
+                                <div class="icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-3.536-2.536L6.343 15.34 15.343 6.343l2.122 2.122-9.001 9.001z"></path></g></svg></div>
+                                <div class="icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M20 7h-4.04c-.45-1.69-2.03-3-3.96-3-1.93 0-3.51 1.31-3.96 3H4v2h4.04c.45 1.69 2.03 3 3.96 3 1.93 0 3.51-1.31 3.96-3H20V7zM12 10c-.83 0-1.5-.67-1.5-1.5S11.17 7 12 7s1.5.67 1.5 1.5S12.83 10 12 10zM20 15h-8.04c-.45-1.69-2.03-3-3.96-3-1.93 0-3.51 1.31-3.96 3H4v2h4.04c.45 1.69 2.03 3 3.96 3 1.93 0 3.51-1.31 3.96-3H20v-2zM8 18c-.83 0-1.5-.67-1.5-1.5S7.17 15 8 15s1.5.67 1.5 1.5S8.83 18 8 18z"></path></g></svg></div>
+                                <div class="icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M8 9.5C8 8.119 8.672 7 9.5 7S11 8.119 11 9.5 10.328 12 9.5 12 8 10.881 8 9.5zm6.5 2.5c.828 0 1.5-1.119 1.5-2.5S15.328 7 14.5 7 13 8.119 13 9.5s.672 2.5 1.5 2.5zM12 16c-2.224 0-4.021-1.294-4.761-3H5.067C5.925 15.65 8.718 18 12 18s6.075-2.35 6.933-5h-2.172C16.021 14.706 14.224 16 12 16zM12 22.25C6.34 22.25 1.75 17.66 1.75 12S6.34 1.75 12 1.75 22.25 6.34 22.25 12 17.66 22.25 12 22.25zm0-19C7.17 3.25 3.25 7.17 3.25 12S7.17 20.75 12 20.75 20.75 16.83 20.75 12 16.83 3.25 12 3.25z"></path></g></svg></div>
+                                <div class="icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM12.5 11.5h-2v4.86l3.86 2.31.75-1.23-3.11-1.85v-4.09z"></path></g></svg></div>
+                                <div class="icon-wrap icon-disabled"><svg viewBox="0 0 24 24"><g><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></g></svg></div>
+                                <div class="icon-wrap icon-disabled"><svg viewBox="0 0 24 24"><g><path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"></path></g></svg></div>
+                            </div>
+                            <button class="compose-btn">Post</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-posts-banner">Show 70 posts</div>
+                <div class="feed-timeline">
+                    <div class="tweet">
+                        <div class="tweet-left">
+                            <div class="tweet-avatar"><img src="https://i.pravatar.cc/150?img=12" alt="OpTic"></div>
+                        </div>
+                        <div class="tweet-content">
+                            <div class="tweet-context">
+                                <svg viewBox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg>
+                                OpTic Roger reposted
+                            </div>
+                            <div class="tweet-header">
+                                <div class="tweet-user-info">
+                                    <span class="tweet-name">OpTic</span>
+                                    <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#ffd400;"><g><path d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.918-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.337 2.25c-.416-.165-.866-.25-1.336-.25-2.21 0-3.918 1.792-3.918 4 0 .495.084.965.238 1.4-1.273.65-2.148 2.02-2.148 3.6 0 1.46.74 2.746 1.846 3.45-.043.275-.064.557-.064.846 0 2.21 1.71 3.998 3.918 3.998.47 0 .92-.084 1.336-.25C9.182 21.585 10.49 22.5 12 22.5s2.816-.917 3.337-2.25c.416.165.866.25 1.336.25 2.21 0 3.918-1.792 3.918-4 0-.29-.02-.572-.064-.847 1.107-.704 1.846-1.99 1.846-3.45zm-11.235 4.31l-3.313-3.036 1.353-1.474 1.87 1.713 5.17-6.287 1.54 1.266-6.62 8.046z"></path></g></svg>
+                                    <span class="tweet-handle">@OpTic</span>
+                                    <span class="tweet-time">· 3h</span>
+                                </div>
+                                <div class="tweet-options"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+                            </div>
+                            <div class="tweet-text">Day Zero</div>
+                            <div class="tweet-media grid-2">
+                                <img src="https://picsum.photos/400/400?1" alt="Media 1">
+                                <img src="https://picsum.photos/400/400?2" alt="Media 2">
+                            </div>
+                            <div class="tweet-footer">
+                                <div class="footer-action action-reply">
+                                    <div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01z"></path></g></svg></div>
+                                    <span>10</span>
+                                </div>
+                                <div class="footer-action action-repost">
+                                    <div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div>
+                                    <span>52</span>
+                                </div>
+                                <div class="footer-action action-like">
+                                    <div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-1.003.59-1.003-.59c-4.378-2.55-7.028-5.19-8.38-7.67-1.424-2.61-1.554-5.12-.245-7.78 1.109-2.25 3.197-3.61 5.642-3.75 2.15-.12 4.234 1.06 5.568 3.12 1.332-2.06 3.416-3.24 5.566-3.12 2.445.14 4.533 1.5 5.642 3.75 1.309 2.66 1.179 5.17-.245 7.78z"></path></g></svg></div>
+                                    <span>2.2K</span>
+                                </div>
+                                <div class="footer-action action-view">
+                                    <div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg></div>
+                                    <span>24K</span>
+                                </div>
+                                <div class="footer-right">
+                                    <div class="footer-action action-reply"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div></div>
+                                    <div class="footer-action action-reply"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tweet">
+                        <div class="tweet-left">
+                            <div class="tweet-avatar"><img src="https://i.pravatar.cc/150?img=18" alt="Luna"></div>
+                        </div>
+                        <div class="tweet-content">
+                            <div class="tweet-header">
+                                <div class="tweet-user-info">
+                                    <span class="tweet-name">Luna Dev</span>
+                                    <span class="tweet-handle">@luna_codes</span>
+                                    <span class="tweet-time">· 1h</span>
+                                </div>
+                                <div class="tweet-options"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+                            </div>
+                            <div class="tweet-text">Ship fast, refactor faster.</div>
+                            <div class="tweet-media grid-4">
+                                <img src="https://picsum.photos/400/400?3" alt="Media 3">
+                                <img src="https://picsum.photos/400/400?4" alt="Media 4">
+                                <img src="https://picsum.photos/400/400?5" alt="Media 5">
+                                <img src="https://picsum.photos/400/400?6" alt="Media 6">
+                            </div>
+                            <div class="tweet-footer">
+                                <div class="footer-action action-reply"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01z"></path></g></svg></div><span>28</span></div>
+                                <div class="footer-action action-repost"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><span>12</span></div>
+                                <div class="footer-action action-like"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-1.003.59-1.003-.59c-4.378-2.55-7.028-5.19-8.38-7.67-1.424-2.61-1.554-5.12-.245-7.78 1.109-2.25 3.197-3.61 5.642-3.75 2.15-.12 4.234 1.06 5.568 3.12 1.332-2.06 3.416-3.24 5.566-3.12 2.445.14 4.533 1.5 5.642 3.75 1.309 2.66 1.179 5.17-.245 7.78z"></path></g></svg></div><span>3.4K</span></div>
+                                <div class="footer-action action-view"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg></div><span>89K</span></div>
+                                <div class="footer-right">
+                                    <div class="footer-action action-reply"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div></div>
+                                    <div class="footer-action action-reply"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tweet">
+                        <div class="tweet-left">
+                            <div class="tweet-avatar"><img src="https://i.pravatar.cc/150?img=22" alt="Mina"></div>
+                        </div>
+                        <div class="tweet-content">
+                            <div class="tweet-header">
+                                <div class="tweet-user-info">
+                                    <span class="tweet-name">Mina</span>
+                                    <span class="tweet-handle">@uxmina</span>
+                                    <span class="tweet-time">· 5h</span>
+                                </div>
+                                <div class="tweet-options"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+                            </div>
+                            <div class="tweet-text">The best interfaces are obvious after you use them once.</div>
+                            <div class="quote-tweet">
+                                <div class="quote-padding">
+                                    <div class="quote-header">
+                                        <img class="quote-avatar" src="https://i.pravatar.cc/150?img=31" alt="Quoted">
+                                        <span class="tweet-name">Pixel Daily</span>
+                                        <span class="tweet-handle">@pixeldaily</span>
+                                        <span class="tweet-time">· 8h</span>
+                                    </div>
+                                    <div class="tweet-text">A clean timeline layout with tight spacing and predictable actions still wins in 2026.</div>
+                                </div>
+                                <div class="quote-media tweet-media grid-2">
+                                    <img src="https://picsum.photos/400/300?7" alt="Quote media 1">
+                                    <img src="https://picsum.photos/400/300?8" alt="Quote media 2">
+                                </div>
+                            </div>
+                            <div class="tweet-footer">
+                                <div class="footer-action action-reply"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01z"></path></g></svg></div><span>6</span></div>
+                                <div class="footer-action action-repost"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><span>20</span></div>
+                                <div class="footer-action action-like"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-1.003.59-1.003-.59c-4.378-2.55-7.028-5.19-8.38-7.67-1.424-2.61-1.554-5.12-.245-7.78 1.109-2.25 3.197-3.61 5.642-3.75 2.15-.12 4.234 1.06 5.568 3.12 1.332-2.06 3.416-3.24 5.566-3.12 2.445.14 4.533 1.5 5.642 3.75 1.309 2.66 1.179 5.17-.245 7.78z"></path></g></svg></div><span>914</span></div>
+                                <div class="footer-action action-view"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg></div><span>17K</span></div>
+                                <div class="footer-right">
+                                    <div class="footer-action action-reply"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div></div>
+                                    <div class="footer-action action-reply"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tweet">
+                        <div class="tweet-left">
+                            <div class="tweet-avatar"><img src="https://i.pravatar.cc/150?img=45" alt="Rafa"></div>
+                        </div>
+                        <div class="tweet-content">
+                            <div class="tweet-header">
+                                <div class="tweet-user-info">
+                                    <span class="tweet-name">Rafa</span>
+                                    <span class="tweet-handle">@rafamakes</span>
+                                    <span class="tweet-time">· 6h</span>
+                                </div>
+                                <div class="tweet-options"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+                            </div>
+                            <div class="tweet-text">Mockups from tonight. Which one ships first?</div>
+                            <div class="tweet-media grid-2">
+                                <img src="https://picsum.photos/500/300?9" alt="Media 9">
+                                <img src="https://picsum.photos/500/300?10" alt="Media 10">
+                            </div>
+                            <div class="tweet-footer">
+                                <div class="footer-action action-reply"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01z"></path></g></svg></div><span>41</span></div>
+                                <div class="footer-action action-repost"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><span>98</span></div>
+                                <div class="footer-action action-like"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-1.003.59-1.003-.59c-4.378-2.55-7.028-5.19-8.38-7.67-1.424-2.61-1.554-5.12-.245-7.78 1.109-2.25 3.197-3.61 5.642-3.75 2.15-.12 4.234 1.06 5.568 3.12 1.332-2.06 3.416-3.24 5.566-3.12 2.445.14 4.533 1.5 5.642 3.75 1.309 2.66 1.179 5.17-.245 7.78z"></path></g></svg></div><span>1.1K</span></div>
+                                <div class="footer-action action-view"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg></div><span>33K</span></div>
+                                <div class="footer-right">
+                                    <div class="footer-action action-reply"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div></div>
+                                    <div class="footer-action action-reply"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tweet">
+                        <div class="tweet-left">
+                            <div class="tweet-avatar"><img src="https://i.pravatar.cc/150?img=9" alt="Atlas"></div>
+                        </div>
+                        <div class="tweet-content">
+                            <div class="tweet-context">
+                                <svg viewBox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg>
+                                You reposted
+                            </div>
+                            <div class="tweet-header">
+                                <div class="tweet-user-info">
+                                    <span class="tweet-name">Atlas AI</span>
+                                    <span class="tweet-handle">@atlasai</span>
+                                    <span class="tweet-time">· 9h</span>
+                                </div>
+                                <div class="tweet-options"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+                            </div>
+                            <div class="tweet-text">Latency is a feature.
+Polish is a feature.
+Defaults are a feature.</div>
+                            <div class="tweet-footer">
+                                <div class="footer-action action-reply"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01z"></path></g></svg></div><span>19</span></div>
+                                <div class="footer-action action-repost"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><span>301</span></div>
+                                <div class="footer-action action-like"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-1.003.59-1.003-.59c-4.378-2.55-7.028-5.19-8.38-7.67-1.424-2.61-1.554-5.12-.245-7.78 1.109-2.25 3.197-3.61 5.642-3.75 2.15-.12 4.234 1.06 5.568 3.12 1.332-2.06 3.416-3.24 5.566-3.12 2.445.14 4.533 1.5 5.642 3.75 1.309 2.66 1.179 5.17-.245 7.78z"></path></g></svg></div><span>7.8K</span></div>
+                                <div class="footer-action action-view"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg></div><span>140K</span></div>
+                                <div class="footer-right">
+                                    <div class="footer-action action-reply"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div></div>
+                                    <div class="footer-action action-reply"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tweet">
+                        <div class="tweet-left">
+                            <div class="tweet-avatar"><img src="https://i.pravatar.cc/150?img=28" alt="Kai"></div>
+                        </div>
+                        <div class="tweet-content">
+                            <div class="tweet-header">
+                                <div class="tweet-user-info">
+                                    <span class="tweet-name">Kai</span>
+                                    <span class="tweet-handle">@kai_visuals</span>
+                                    <span class="tweet-time">· 11h</span>
+                                </div>
+                                <div class="tweet-options"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+                            </div>
+                            <div class="tweet-text">Small animation study for card transitions.</div>
+                            <div class="tweet-media grid-2">
+                                <img src="https://picsum.photos/500/500?11" alt="Media 11">
+                                <img src="https://picsum.photos/500/500?12" alt="Media 12">
+                            </div>
+                            <div class="tweet-footer">
+                                <div class="footer-action action-reply"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01z"></path></g></svg></div><span>4</span></div>
+                                <div class="footer-action action-repost"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><span>9</span></div>
+                                <div class="footer-action action-like"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-1.003.59-1.003-.59c-4.378-2.55-7.028-5.19-8.38-7.67-1.424-2.61-1.554-5.12-.245-7.78 1.109-2.25 3.197-3.61 5.642-3.75 2.15-.12 4.234 1.06 5.568 3.12 1.332-2.06 3.416-3.24 5.566-3.12 2.445.14 4.533 1.5 5.642 3.75 1.309 2.66 1.179 5.17-.245 7.78z"></path></g></svg></div><span>412</span></div>
+                                <div class="footer-action action-view"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg></div><span>12K</span></div>
+                                <div class="footer-right">
+                                    <div class="footer-action action-reply"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div></div>
+                                    <div class="footer-action action-reply"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tweet">
+                        <div class="tweet-left">
+                            <div class="tweet-avatar"><img src="https://i.pravatar.cc/150?img=50" alt="Noah"></div>
+                        </div>
+                        <div class="tweet-content">
+                            <div class="tweet-header">
+                                <div class="tweet-user-info">
+                                    <span class="tweet-name">Noah</span>
+                                    <span class="tweet-handle">@noahbuilds</span>
+                                    <span class="tweet-time">· 13h</span>
+                                </div>
+                                <div class="tweet-options"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+                            </div>
+                            <div class="tweet-text">Drafted a quote tweet card component. It feels native now.</div>
+                            <div class="quote-tweet">
+                                <div class="quote-padding">
+                                    <div class="quote-header">
+                                        <img class="quote-avatar" src="https://i.pravatar.cc/150?img=60" alt="Quoted user">
+                                        <span class="tweet-name">Build Weekly</span>
+                                        <span class="tweet-handle">@buildweekly</span>
+                                        <span class="tweet-time">· 16h</span>
+                                    </div>
+                                    <div class="tweet-text">If your card states are complete, your product feels expensive.</div>
+                                </div>
+                            </div>
+                            <div class="tweet-footer">
+                                <div class="footer-action action-reply"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01z"></path></g></svg></div><span>2</span></div>
+                                <div class="footer-action action-repost"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg></div><span>7</span></div>
+                                <div class="footer-action action-like"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-1.003.59-1.003-.59c-4.378-2.55-7.028-5.19-8.38-7.67-1.424-2.61-1.554-5.12-.245-7.78 1.109-2.25 3.197-3.61 5.642-3.75 2.15-.12 4.234 1.06 5.568 3.12 1.332-2.06 3.416-3.24 5.566-3.12 2.445.14 4.533 1.5 5.642 3.75 1.309 2.66 1.179 5.17-.245 7.78z"></path></g></svg></div><span>285</span></div>
+                                <div class="footer-action action-view"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"></path></g></svg></div><span>8K</span></div>
+                                <div class="footer-right">
+                                    <div class="footer-action action-reply"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg></div></div>
+                                    <div class="footer-action action-reply"><div class="footer-icon-wrap"><svg viewBox="0 0 24 24"><g><path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path></g></svg></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div id="explore-view" class="hidden">
+    <div class="explore-header">
+        <div class="explore-search-row">
+            <div class="explore-search-bar">
+                <svg viewBox="0 0 24 24"><g><path d="M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.178-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z"></path></g></svg>
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="settings-icon">
+                <svg viewBox="0 0 24 24"><g><path d="M10.54 1.75h2.92l1.57 2.36c.11.17.32.25.53.21l2.53-.59 2.17 2.17-.58 2.54c-.05.2.04.41.21.53l2.36 1.57v2.92l-2.36 1.57c-.17.12-.26.33-.21.53l.58 2.54-2.17 2.17-2.53-.59c-.21-.04-.42.04-.53.21l-1.57 2.36h-2.92l-1.57-2.36c-.11-.17-.32-.25-.53-.21l-2.53.59-2.17-2.17.58-2.54c.05-.2-.04-.41-.21-.53l-2.36-1.57v-2.92l2.36-1.57c.17-.12.26-.33.21-.53l-.58-2.54 2.17-2.17 2.53.59c.21.04.42-.04.53-.21l1.57-2.36zM13 3.75h-2l-1.27 1.9c-.78 1.15-2.36 1.74-3.71 1.42l-2.04-.48-1.42 1.42.49 2.04c.31 1.35-.28 2.93-1.43 3.71L1.75 11v2l1.9 1.27c1.15.78 1.74 2.36 1.42 3.71l-.48 2.04 1.42 1.42 2.04-.49c1.35-.31 2.93.28 3.71 1.43l1.27 1.9h2l1.27-1.9c.78-1.15 2.36-1.74 3.71-1.42l2.04.48 1.42-1.42-.49-2.04c-.31-1.35.28-2.93 1.43-3.71l1.9-1.27v-2l-1.9-1.27c-1.15-.78-1.74-2.36-1.42-3.71l.48-2.04-1.42-1.42-2.04.49c-1.35.31-2.93-.28-3.71-1.43l-1.27-1.9zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></g></svg>
+            </div>
+        </div>
+        <div class="explore-tabs">
+            <div class="explore-tab active" data-target="explore-foryou"><span>For You</span><div class="explore-active-line"></div></div>
+            <div class="explore-tab" data-target="explore-trending"><span>Trending</span><div class="explore-active-line"></div></div>
+            <div class="explore-tab" data-target="explore-news"><span>News</span><div class="explore-active-line"></div></div>
+            <div class="explore-tab" data-target="explore-sports"><span>Sports</span><div class="explore-active-line"></div></div>
+            <div class="explore-tab" data-target="explore-entertainment"><span>Entertainment</span><div class="explore-active-line"></div></div>
+        </div>
+    </div>
+    <div id="explore-foryou" class="explore-tab-content">
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-title">Druski's Drag Skit Mimics Erika Kirk, Draws Conservative Backlash</div>
+                <div class="explore-meta">
+                    <div class="avatar-group">
+                        <img src="https://i.pravatar.cc/150?img=12" alt="user"><img src="https://i.pravatar.cc/150?img=13" alt="user">
+                    </div>
+                    <span>1 day ago · Entertainment · 325K posts</span>
+                </div>
+            </div>
+            <div class="explore-item-right"><img src="https://picsum.photos/100/100?10" alt="news"></div>
+        </div>
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-title">Dillon Danis Dominates Nina Drama in Chaotic Pre-Fight Stream</div>
+                <div class="explore-meta">
+                    <div class="avatar-group">
+                        <img src="https://i.pravatar.cc/150?img=14" alt="user"><img src="https://i.pravatar.cc/150?img=15" alt="user">
+                    </div>
+                    <span>21 hours ago · Sports · 2.3K posts</span>
+                </div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-context">Trending in South Africa</div>
+                <div class="explore-title">Clicks</div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-context">Trending in South Africa</div>
+                <div class="explore-title">My GOAT</div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+    </div>
+    <div id="explore-trending" class="explore-tab-content hidden">
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-context">1 · Entertainment · Trending</div>
+                <div class="explore-title">#ThandekaTheBrand</div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-context">2 · Trending in South Africa</div>
+                <div class="explore-title">MARKETABLE THANDEKA</div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-context">3 · Trending in South Africa</div>
+                <div class="explore-title">DONATE TO THANDEKA GFM</div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+    </div>
+    <div id="explore-news" class="explore-tab-content hidden">
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-title">Online Memes Target Charlie Kirk's Legacy After Assassination</div>
+                <div class="explore-meta">
+                    <div class="avatar-group">
+                        <img src="https://i.pravatar.cc/150?img=54" alt="user"><img src="https://i.pravatar.cc/150?img=55" alt="user"><img src="https://i.pravatar.cc/150?img=56" alt="user">
+                    </div>
+                    <span>6 hours ago · News · 10K posts</span>
+                </div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-title">Developers Test OpenAI's Updated Codex Against Claude Code</div>
+                <div class="explore-meta">
+                    <div class="avatar-group">
+                        <img src="https://i.pravatar.cc/150?img=57" alt="user"><img src="https://i.pravatar.cc/150?img=58" alt="user"><img src="https://i.pravatar.cc/150?img=59" alt="user">
+                    </div>
+                    <span>23 hours ago · News · 4.1K posts</span>
+                </div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-title">Unsealed Documents Reveal Epstein's Early Bitcoin Investments</div>
+                <div class="explore-meta">
+                    <div class="avatar-group">
+                        <img src="https://i.pravatar.cc/150?img=60" alt="user"><img src="https://i.pravatar.cc/150?img=61" alt="user"><img src="https://i.pravatar.cc/150?img=62" alt="user">
+                    </div>
+                    <span>1 day ago · News · 2.4K posts</span>
+                </div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-title">Viral Video Falsely Claims Iranian Missile Hit Mossad HQ</div>
+                <div class="explore-meta">
+                    <div class="avatar-group">
+                        <img src="https://i.pravatar.cc/150?img=63" alt="user"><img src="https://i.pravatar.cc/150?img=64" alt="user"><img src="https://i.pravatar.cc/150?img=65" alt="user">
+                    </div>
+                    <span>2 days ago · News · 10K posts</span>
+                </div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-title">Recycled Hoax Revives Hitler Hiding Claim on X</div>
+                <div class="explore-meta">
+                    <div class="avatar-group">
+                        <img src="https://i.pravatar.cc/150?img=66" alt="user"><img src="https://i.pravatar.cc/150?img=67" alt="user"><img src="https://i.pravatar.cc/150?img=68" alt="user">
+                    </div>
+                    <span>5 hours ago · News · 3.7K posts</span>
+                </div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+        <div class="explore-subsection-rule"></div>
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-context">Politics · Trending</div>
+                <div class="explore-title">Nigerians</div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-context">Politics · Trending</div>
+                <div class="explore-title">Tinubu</div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+    </div>
+    <div id="explore-sports" class="explore-tab-content hidden">
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-title">FaZe Vegas Reverse Sweeps LA Thieves in CDL Major II Thriller</div>
+                <div class="explore-meta">
+                    <div class="avatar-group">
+                        <img src="https://i.pravatar.cc/150?img=40" alt="user"><img src="https://i.pravatar.cc/150?img=41" alt="user">
+                    </div>
+                    <span>3 hours ago · Sports · 775 posts</span>
+                </div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-title">Toronto KOI Stages Comeback to Beat Vancouver Surge 3-1 in CDL Major Play-In</div>
+                <div class="explore-meta">
+                    <div class="avatar-group">
+                        <img src="https://i.pravatar.cc/150?img=42" alt="user"><img src="https://i.pravatar.cc/150?img=43" alt="user"><img src="https://i.pravatar.cc/150?img=44" alt="user">
+                    </div>
+                    <span>5 hours ago · Sports · 492 posts</span>
+                </div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-title">Muay Thai Gym Video Reveals Hygiene Risks in Thailand</div>
+                <div class="explore-meta">
+                    <div class="avatar-group">
+                        <img src="https://i.pravatar.cc/150?img=45" alt="user"><img src="https://i.pravatar.cc/150?img=46" alt="user"><img src="https://i.pravatar.cc/150?img=47" alt="user">
+                    </div>
+                    <span>11 hours ago · Other · 769 posts</span>
+                </div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-title">DreamHack Birmingham 2026 Kicks Off with CDL Major II Action</div>
+                <div class="explore-meta">
+                    <div class="avatar-group">
+                        <img src="https://i.pravatar.cc/150?img=48" alt="user"><img src="https://i.pravatar.cc/150?img=49" alt="user"><img src="https://i.pravatar.cc/150?img=50" alt="user">
+                    </div>
+                    <span>2 days ago · Entertainment · 2.6K posts</span>
+                </div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-title">Suzuka Paddock Lights Up with Cherry Blossoms and Wolf Liveries</div>
+                <div class="explore-meta">
+                    <div class="avatar-group">
+                        <img src="https://i.pravatar.cc/150?img=51" alt="user"><img src="https://i.pravatar.cc/150?img=52" alt="user"><img src="https://i.pravatar.cc/150?img=53" alt="user">
+                    </div>
+                    <span>2 days ago · Sports · 44K posts</span>
+                </div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+        <div class="explore-subsection-rule"></div>
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-context">Sports · Trending</div>
+                <div class="explore-title">The GOAT</div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-context">UEFA Champions League · Trending</div>
+                <div class="explore-title">Raphinha</div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+    </div>
+    <div id="explore-entertainment" class="explore-tab-content hidden">
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-title">Druski's Drag Skit Mimics Erika Kirk, Draws Conservative Backlash</div>
+                <div class="explore-meta">
+                    <div class="avatar-group">
+                        <img src="https://i.pravatar.cc/150?img=26" alt="user"><img src="https://i.pravatar.cc/150?img=27" alt="user"><img src="https://i.pravatar.cc/150?img=28" alt="user">
+                    </div>
+                    <span>1 day ago · Entertainment · 330K posts</span>
+                </div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-title">Online Memes Target Charlie Kirk's Legacy After Assassination</div>
+                <div class="explore-meta">
+                    <div class="avatar-group">
+                        <img src="https://i.pravatar.cc/150?img=29" alt="user"><img src="https://i.pravatar.cc/150?img=30" alt="user"><img src="https://i.pravatar.cc/150?img=31" alt="user">
+                    </div>
+                    <span>6 hours ago · Entertainment · 9.2K posts</span>
+                </div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-title">Breakfast Plates Spark Drink Pairing Debates</div>
+                <div class="explore-meta">
+                    <div class="avatar-group">
+                        <img src="https://i.pravatar.cc/150?img=32" alt="user"><img src="https://i.pravatar.cc/150?img=33" alt="user"><img src="https://i.pravatar.cc/150?img=34" alt="user">
+                    </div>
+                    <span>1 day ago · Entertainment · 876 posts</span>
+                </div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+        <div class="explore-item">
+            <div class="explore-item-content">
+                <div class="explore-title">Fans Celebrate Harry Potter and the Chamber of Secrets Game</div>
+                <div class="explore-meta">
+                    <div class="avatar-group">
+                        <img src="https://i.pravatar.cc/150?img=35" alt="user"><img src="https://i.pravatar.cc/150?img=36" alt="user"><img src="https://i.pravatar.cc/150?img=37" alt="user">
+                    </div>
+                    <span>19 hours ago · Entertainment · 2.7K posts</span>
+                </div>
+            </div>
+            <div class="explore-more"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+        </div>
+    </div>
+</div>
             </div>
 
             <!-- Right Info Section -->
             <div class="info-section-container">
-                <div class="sub-to-prem">
-                    Subscribe to Premium mabru
+                <div class="search-wrapper">
+                    <div class="search-bar">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><g><path d="M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.178-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z"></path></g></svg>
+                        <input type="text" placeholder="Search">
+                    </div>
+                </div>
+                <div class="right-card">
+                    <div class="card-item" style="cursor: default;">
+                        <div class="card-header" style="padding: 0 0 8px 0;">Subscribe to Premium</div>
+                        <div class="premium-text">Get rid of ads, see your analytics, boost your replies and unlock 20+ features.</div>
+                        <button class="btn-subscribe">Subscribe</button>
+                    </div>
+                </div>
+                <div class="right-card">
+                    <div class="card-header">Live on X</div>
+                    <div class="card-item">
+                        <div class="live-host-row">
+                            <img src="https://i.pravatar.cc/150?img=44" alt="Host" class="host-avatar">
+                            <span class="text-bold" style="margin-top:0;">Gentle Mates</span>
+                            <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:#ffd400;"><g><path d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.918-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.337 2.25c-.416-.165-.866-.25-1.336-.25-2.21 0-3.918 1.792-3.918 4 0 .495.084.965.238 1.4-1.273.65-2.148 2.02-2.148 3.6 0 1.46.74 2.746 1.846 3.45-.043.275-.064.557-.064.846 0 2.21 1.71 3.998 3.918 3.998.47 0 .92-.084 1.336-.25C9.182 21.585 10.49 22.5 12 22.5s2.816-.917 3.337-2.25c.416.165.866.25 1.336.25 2.21 0 3.918-1.792 3.918-4 0-.29-.02-.572-.064-.847 1.107-.704 1.846-1.99 1.846-3.45zm-11.235 4.31l-3.313-3.036 1.353-1.474 1.87 1.713 5.17-6.287 1.54 1.266-6.62 8.046z"></path></g></svg>
+                            <span class="text-muted">is hosting</span>
+                        </div>
+                        <div class="live-title-row">
+                            <div class="live-title">PARIS GENTLE MATES vs. CAROLINA RAVENS - Premie...</div>
+                            <div class="live-badge">
+                                <img src="https://i.pravatar.cc/150?img=44" alt="Badge">
+                                <span>+828</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <div class="live-host-row">
+                            <img src="https://i.pravatar.cc/150?img=55" alt="Host" class="host-avatar">
+                            <span class="text-bold" style="margin-top:0;">Call of Duty League</span>
+                            <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:#ffd400;"><g><path d="M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.918-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.337 2.25c-.416-.165-.866-.25-1.336-.25-2.21 0-3.918 1.792-3.918 4 0 .495.084.965.238 1.4-1.273.65-2.148 2.02-2.148 3.6 0 1.46.74 2.746 1.846 3.45-.043.275-.064.557-.064.846 0 2.21 1.71 3.998 3.918 3.998.47 0 .92-.084 1.336-.25C9.182 21.585 10.49 22.5 12 22.5s2.816-.917 3.337-2.25c.416.165.866.25 1.336.25 2.21 0 3.918-1.792 3.918-4 0-.29-.02-.572-.064-.847 1.107-.704 1.846-1.99 1.846-3.45zm-11.235 4.31l-3.313-3.036 1.353-1.474 1.87 1.713 5.17-6.287 1.54 1.266-6.62 8.046z"></path></g></svg>
+                            <span class="text-muted">is hosting</span>
+                        </div>
+                        <div class="live-title-row">
+                            <div class="live-title">Call of Duty League Major II Tournament Day 1</div>
+                            <div class="live-badge">
+                                <img src="https://i.pravatar.cc/150?img=55" alt="Badge">
+                                <span>+219</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-card">
+                    <div class="card-header">
+                        Today’s News
+                        <div class="card-header-icon">
+                            <svg viewBox="0 0 24 24"><g><path d="M10.59 12L4.54 5.96l1.42-1.42L12 10.59l6.04-6.05 1.42 1.42L13.41 12l6.05 6.04-1.42 1.42L12 13.41l-6.04 6.05-1.42-1.42L10.59 12z"></path></g></svg>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <div class="news-title">MacBook Neo Outperforms Windows PC in Video Editing Test</div>
+                        <div class="news-context">
+                            <div class="avatar-group">
+                                <img src="https://i.pravatar.cc/150?img=60" alt="user">
+                                <img src="https://i.pravatar.cc/150?img=61" alt="user">
+                                <img src="https://i.pravatar.cc/150?img=62" alt="user">
+                            </div>
+                            <span class="text-muted">2 hours ago · Other · 103 posts</span>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <div class="news-title">Druski's Conservative Women Skit Draws Erika Kirk Comparisons and Backlash</div>
+                        <div class="news-context">
+                            <div class="avatar-group">
+                                <img src="https://i.pravatar.cc/150?img=63" alt="user">
+                                <img src="https://i.pravatar.cc/150?img=64" alt="user">
+                                <img src="https://i.pravatar.cc/150?img=65" alt="user">
+                            </div>
+                            <span class="text-muted">1 day ago · News · 212.2K posts</span>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <div class="news-title">Two Men Arrested in South Africa for Drug-Facilitated Assaults and Child Abuse ...</div>
+                        <div class="news-context">
+                            <div class="avatar-group">
+                                <img src="https://i.pravatar.cc/150?img=66" alt="user">
+                                <img src="https://i.pravatar.cc/150?img=67" alt="user">
+                                <img src="https://i.pravatar.cc/150?img=68" alt="user">
+                            </div>
+                            <span class="text-muted">11 hours ago · News · 3,396 posts</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-card">
+                    <div class="card-header">What's happening</div>
+                    <div class="card-item">
+                        <div class="trending-row">
+                            <div class="text-muted">Trending in South Africa</div>
+                            <div class="trending-dots"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+                        </div>
+                        <div class="text-bold">Ghost Lady</div>
+                    </div>
+                    <div class="card-item">
+                        <div class="trending-row">
+                            <div class="text-muted">Sports · Trending</div>
+                            <div class="trending-dots"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+                        </div>
+                        <div class="text-bold">My GOAT</div>
+                    </div>
+                    <div class="card-item">
+                        <div class="trending-row">
+                            <div class="text-muted">Trending in South Africa</div>
+                            <div class="trending-dots"><svg viewBox="0 0 24 24"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg></div>
+                        </div>
+                        <div class="text-bold">Dankie</div>
+                    </div>
+                    <div class="show-more">Show more</div>
+                </div>
+                <div class="right-card">
+                    <div class="card-header">Who to follow</div>
+                    <div class="card-item">
+                        <div class="follow-row">
+                            <div class="follow-info">
+                                <img src="https://i.pravatar.cc/150?img=33" alt="User" class="follow-avatar">
+                                <div class="follow-names">
+                                    <span class="text-bold" style="margin-top:0;">Michelé 'Stickalish' Br...</span>
+                                    <span class="text-muted">@Micks_Sticks</span>
+                                </div>
+                            </div>
+                            <button class="btn-follow">Follow</button>
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <div class="follow-row">
+                            <div class="follow-info">
+                                <img src="https://i.pravatar.cc/150?img=11" alt="User" class="follow-avatar">
+                                <div class="follow-names">
+                                    <span class="text-bold" style="margin-top:0;">mikeyangues</span>
+                                    <span class="text-muted">@yanguasjr</span>
+                                </div>
+                            </div>
+                            <button class="btn-follow">Follow</button>
+                        </div>
+                    </div>
+                    <div class="show-more">Show more</div>
+                </div>
+                <div class="right-footer">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Ads info</a>
+                    <a href="#">More ...</a>
+                    <span>© 2026 X Corp.</span>
                 </div>
             </div>
 
         </main>
         
     </div>
+    <div class="mobile-bottom-nav">
+        <div class="nav-icon"><svg viewBox="0 0 24 24"><g><path d="M12 1.696L.622 8.807l1.06 1.696L3 9.679V19.5C3 20.881 4.119 22 5.5 22h13c1.381 0 2.5-1.119 2.5-2.5V9.679l1.318.824 1.06-1.696L12 1.696zM12 16.5c-1.933 0-3.5-1.567-3.5-3.5s1.567-3.5 3.5-3.5 3.5 1.567 3.5 3.5-1.567 3.5-3.5 3.5z"></path></g></svg></div>
+        <div class="nav-icon"><svg viewBox="0 0 24 24"><g><path d="M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.178-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z"></path></g></svg></div>
+        <div class="nav-icon"><svg viewBox="0 0 24 24"><g><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-3.536-2.536L6.343 15.34 15.343 6.343l2.122 2.122-9.001 9.001z"></path></g></svg></div>
+        <div class="nav-icon"><svg viewBox="0 0 24 24"><g><path d="M19.993 9.042C19.48 5.017 16.054 2 11.996 2s-7.49 3.021-7.999 7.051L2.866 18H7.1c.463 2.282 2.481 4 4.9 4s4.437-1.718 4.9-4h4.236l-1.143-8.958zM12 20c-1.306 0-2.417-.835-2.829-2h5.658c-.412 1.165-1.523 2-2.829 2zm-6.866-4l.847-6.698C6.364 6.272 8.941 4 11.996 4s5.627 2.268 6.013 5.295L18.864 16H5.134z"></path></g></svg></div>
+        <div class="nav-icon"><svg viewBox="0 0 24 24"><g><path d="M1.998 5.5c0-1.381 1.119-2.5 2.5-2.5h15c1.381 0 2.5 1.119 2.5 2.5v13c0 1.381-1.119 2.5-2.5 2.5h-15c-1.381 0-2.5-1.119-2.5-2.5v-13zm2.5-.5c-.276 0-.5.224-.5.5v2.764l8 3.638 8-3.636V5.5c0-.276-.224-.5-.5-.5h-15zm15.5 5.463l-8 3.636-8-3.638V18.5c0 .276.224.5.5.5h15c.276 0 .5-.224.5-.5v-8.037z"></path></g></svg></div>
+    </div>
+    <div class="floating-actions">
+        <div class="float-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><g><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-3.536-2.536L6.343 15.34 15.343 6.343l2.122 2.122-9.001 9.001z"></path></g></svg>
+        </div>
+        <div class="float-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><g><path d="M1.998 5.5c0-1.381 1.119-2.5 2.5-2.5h15c1.381 0 2.5 1.119 2.5 2.5v13c0 1.381-1.119 2.5-2.5 2.5h-15c-1.381 0-2.5-1.119-2.5-2.5v-13zm2.5-.5c-.276 0-.5.224-.5.5v2.764l8 3.638 8-3.636V5.5c0-.276-.224-.5-.5-.5h-15zm15.5 5.463l-8 3.636-8-3.638V18.5c0 .276.224.5.5.5h15c.276 0 .5-.224.5-.5v-8.037z"></path></g></svg>
+        </div>
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>
