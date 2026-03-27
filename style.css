@@ -937,12 +937,74 @@ main {
     background-color: rgba(0, 186, 124, 0.1);
 }
 
+.tweet-footer .footer-action.action-repost.is-reposted {
+    color: #00ba7c;
+}
+
+.tweet-footer .footer-action.action-repost.is-reposted span {
+    color: #00ba7c;
+}
+
+.tweet-footer .footer-action.action-repost.is-reposted .footer-icon-wrap {
+    background-color: rgba(0, 186, 124, 0.12);
+}
+
+.tweet-footer .footer-action.action-repost.is-reposted svg,
+.tweet-footer .footer-action.action-repost.is-reposted svg g,
+.tweet-footer .footer-action.action-repost.is-reposted svg path {
+    fill: #00ba7c;
+}
+
+.action-bookmark:hover {
+    color: var(--twitter-blue);
+    fill: var(--twitter-blue);
+}
+
+.action-bookmark:hover .footer-icon-wrap {
+    background-color: rgba(29, 155, 240, 0.1);
+}
+
+.tweet-footer .footer-action.action-bookmark.is-bookmarked {
+    color: var(--twitter-blue, #1d9bf0);
+}
+
+.tweet-footer .footer-action.action-bookmark.is-bookmarked svg,
+.tweet-footer .footer-action.action-bookmark.is-bookmarked svg g,
+.tweet-footer .footer-action.action-bookmark.is-bookmarked svg path {
+    fill: var(--twitter-blue, #1d9bf0);
+}
+
 .action-like:hover {
     color: #f91880;
     fill: #f91880;
 }
 
 .action-like:hover .footer-icon-wrap {
+    background-color: rgba(249, 24, 128, 0.1);
+}
+
+.footer-icon-wrap .like-icon-filled {
+    display: none;
+}
+
+.action-like.is-liked .like-icon-outline {
+    display: none;
+}
+
+.action-like.is-liked .like-icon-filled {
+    display: block;
+}
+
+.action-like.is-liked {
+    color: #f91880;
+    fill: #f91880;
+}
+
+.action-like.is-liked svg {
+    fill: #f91880;
+}
+
+.action-like.is-liked:hover .footer-icon-wrap {
     background-color: rgba(249, 24, 128, 0.1);
 }
 
@@ -1571,4 +1633,258 @@ main {
     height: 18px;
     fill: var(--twitter-blue);
     flex-shrink: 0;
+}
+
+#retweet-dropdown {
+    position: fixed;
+    background: var(--bg-color);
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+    z-index: 1000;
+    padding: 4px 0;
+    min-width: 150px;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    cursor: pointer;
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 15px;
+    transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+    background-color: var(--hover-bg);
+}
+
+.dropdown-item svg {
+    width: 18.75px;
+    height: 18.75px;
+    fill: var(--text-primary);
+}
+
+#quote-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 5vh;
+    z-index: 1000;
+}
+
+.quote-modal {
+    background: var(--bg-color);
+    width: 100%;
+    max-width: 600px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+}
+
+.quote-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 16px;
+    align-items: center;
+}
+
+.quote-close {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.quote-close:hover {
+    background: var(--hover-bg);
+}
+
+.quote-close svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--text-primary);
+}
+
+.quote-drafts {
+    color: var(--twitter-blue);
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 0 16px;
+}
+
+.quote-body {
+    display: flex;
+    padding: 8px 16px;
+    gap: 12px;
+    overflow-y: auto;
+    max-height: 60vh;
+}
+
+.quote-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.quote-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.quote-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.quote-audience {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    padding: 2px 12px;
+    margin-bottom: 12px;
+    color: var(--twitter-blue);
+    font-weight: 700;
+    font-size: 13px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.quote-audience svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--twitter-blue);
+}
+
+#quote-textarea {
+    border: none;
+    background: transparent;
+    outline: none;
+    resize: none;
+    color: var(--text-primary);
+    font-size: 20px;
+    font-family: inherit;
+    margin-bottom: 12px;
+    min-height: 50px;
+    width: 100%;
+}
+
+#quote-textarea::placeholder {
+    color: var(--text-muted);
+}
+
+#quote-embedded-tweet {
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+#quote-embedded-tweet .tweet {
+    border-bottom: none;
+    padding: 12px 16px;
+}
+
+#quote-embedded-tweet .tweet-footer,
+#quote-embedded-tweet .footer-right {
+    display: none;
+}
+
+#quote-embedded-tweet .tweet-options {
+    display: none;
+}
+
+.quoted-tweet-embed {
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+    pointer-events: none;
+    margin-top: 4px;
+}
+
+.quoted-tweet-embed .tweet {
+    border-bottom: none;
+    padding: 12px 16px;
+}
+
+.quoted-tweet-embed .tweet-footer,
+.quoted-tweet-embed .footer-right,
+.quoted-tweet-embed .tweet-options {
+    display: none;
+}
+
+.quote-footer {
+    border-top: 1px solid var(--border-color);
+    padding: 12px 16px;
+}
+
+.quote-reply-settings {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--twitter-blue);
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.quote-reply-settings svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--twitter-blue);
+}
+
+.quote-actions-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quote-tools svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--twitter-blue);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.quote-post-btn {
+    background: var(--text-primary);
+    color: var(--bg-color);
+    font-weight: 700;
+    font-size: 15px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.quote-post-btn:hover {
+    opacity: 0.9;
 }
