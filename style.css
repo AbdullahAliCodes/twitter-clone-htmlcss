@@ -866,9 +866,11 @@ main {
     padding: 12px;
 }
 
-.quote-header {
+.quote-tweet .quote-header {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     gap: 4px;
     font-size: 15px;
     margin-bottom: 4px;
@@ -1693,7 +1695,7 @@ main {
     box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
 }
 
-.quote-header {
+.quote-modal .quote-header {
     display: flex;
     justify-content: space-between;
     padding: 12px 16px;
@@ -1737,7 +1739,7 @@ main {
     max-height: 60vh;
 }
 
-.quote-avatar {
+.quote-modal .quote-avatar {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -1745,7 +1747,7 @@ main {
     flex-shrink: 0;
 }
 
-.quote-avatar img {
+.quote-modal .quote-avatar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
